@@ -8,7 +8,7 @@ const __dirname = dirname(__filename);
 export default {
   entry: './src/index.tsx',
   output: {
-    path: resolve(__dirname, 'dist'),
+    path: resolve(__dirname, 'build'), // Change 'dist' to 'build'
     filename: 'bundle.js',
   },
   resolve: {
@@ -36,7 +36,7 @@ export default {
     }),
   ],
   devServer: {
-    static: join(__dirname, 'dist'),
+    static: join(__dirname, 'build'), // Ensure this points to 'build' as well
     compress: true,
     port: 9000,
   },
